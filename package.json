@@ -1,7 +1,8 @@
 {
   "name": "z",
-  "version": "1.0.8",
+  "version": "1.1.0",
   "main": "src/z.js",
+  "types": "z.d.ts",
   "description": "native pattern matching for javascript",
   "scripts": {
     "test": "NODE_PATH=. mocha **/*.spec.js",
