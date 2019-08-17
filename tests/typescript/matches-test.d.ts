@@ -6,3 +6,4 @@ declare module "z" {
 
   export function matches(...source:Array<any>): PatternMatches
 }
+

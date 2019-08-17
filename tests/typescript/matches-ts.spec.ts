@@ -1,12 +1,12 @@
 /// <reference path="./matches-test.d.ts" />
 
+import expect from "expect"
 import {matches} from "z"
-//import "expect"
 import "chai"
 import "mocha"
-import expect from "expect"
 
-//import { describe, it } from "mocha";
+
+//import expect from "expect"
 
 describe('matches-ts', () => {
   it('should match tail array with comparsion at tail argument', () => {

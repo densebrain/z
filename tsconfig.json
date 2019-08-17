@@ -20,21 +20,21 @@
     "sourceMap": false,
     "target": "ESNext",
     "outDir": "lib",
-    "rootDirs": [
-      "src",
-      "tests"
-    ],
     "baseUrl": "./",
     "paths": {
       "z": [
         "./src/index.js"
+      ],
+      "expect": [
+        "./node_modules/expect"
       ]
     }
   },
 
   "include": [
     "tests/typescript/**/*.ts",
-    "src/**/*.js"
+    "src/**/*.js",
+    "node_modules/expect/**.ts"
   ]
 
 }
