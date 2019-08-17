@@ -1,0 +1,40 @@
+{
+  "compilerOptions": {
+    "declaration": true,
+    "lib": [
+      "es2015",
+      "es2016",
+      "es2017",
+      "esnext",
+      "dom"
+    ],
+    "module": "commonjs",
+    "moduleResolution": "node",
+    "noFallthroughCasesInSwitch": true,
+    "allowSyntheticDefaultImports": true,
+    "noImplicitAny": false,
+    "preserveConstEnums": false,
+    "emitDecoratorMetadata": true,
+    "experimentalDecorators": true,
+    "esModuleInterop": true,
+    "sourceMap": false,
+    "target": "ESNext",
+    "outDir": "lib",
+    "rootDirs": [
+      "src",
+      "tests"
+    ],
+    "baseUrl": "./",
+    "paths": {
+      "z": [
+        "./src/index.js"
+      ]
+    }
+  },
+
+  "include": [
+    "tests/typescript/**/*.ts",
+    "src/**/*.js"
+  ]
+
+}
