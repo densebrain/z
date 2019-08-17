@@ -1,12 +1,12 @@
 {
   "name": "z",
   "version": "1.2.0",
-  "main": "src/z.js",
-  "types": "z.d.ts",
+  "main": "src/index.js",
+  "types": "src/index.d.ts",
   "description": "native pattern matching for javascript",
   "scripts": {
-    "test": "NODE_PATH=. mocha **/*.spec.js",
-    "test:debug": "NODE_PATH=. mocha --inspect-brk **/*.spec.js",
+    "test": "NODE_PATH=. node --experimental-modules node_modules/.bin/ts-mocha -p tsconfig.json --paths **/*.spec.js **/*.spec.ts",
+    "test:debug": "NODE_PATH=. ts-mocha --inspect-brk **/*.spec.js **/*.spec.ts",
     "test:watch": "npm test -- --watch",
     "test:min": "npm run test:watch -- --reporter min",
     "lint": "standard --fix '**/*.js' | snazzy",
@@ -58,8 +58,11 @@
   "homepage": "https://github.com/z-pattern-matching/z#readme",
   "license": "Apache-2.0",
   "devDependencies": {
-    "chai": "^3.4.0",
+    "@types/chai": "^4.2.0",
+    "@types/mocha": "^5.2.7",
+    "chai": "^4.2.0",
     "coveralls": "^2.11.16",
+    "expect": "^24.9.0",
     "husky": "^0.14.3",
     "lint-staged": "^4.0.1",
     "mocha": "^5.2.0",
@@ -67,7 +70,9 @@
     "nyc": "^10.1.2",
     "prettier-std-cli": "^1.0.0",
     "snazzy": "^7.0.0",
-    "standard": "^8.6.0"
+    "standard": "^8.6.0",
+    "ts-mocha": "^6.0.0",
+    "typescript": "^3.5.3"
   },
   "dependencies": {
     "deep-equal": "^1.0.1",
